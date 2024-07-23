@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SociaLens</title>
+    <link href="../static/css/reset.css" rel="stylesheet">
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <script src="../static/js/bootstrap.js" defer></script>
+    <script src="../static/js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container my-3 d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+        <h1 class="text-center mb-4">SociaLens</h1>
+        <div id="status" class="text-center mb-3">Click 'Enter' to load.</div>
+        <form id="runModelForm">
+            <button type="button" onclick="runModel()">Load</button>
+        </form>  
+    </div>
+
+    <!-- camera permission popup -->
+    <!-- <div class="modal fade" id="permissionModal" tabindex="-1" aria-labelledby="permissionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="permissionModalLabel">Camera Access Required</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>To use the camera for face detection, we need your permission to access the camera.</p>
+                </div>
+                <div class="modal-footer">
+                    <form action="/run_model" method="get">
+                        <button type="submit">Load Model</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</body>
+
+<script>
+    function runModel() {
+        // Send a GET request to the /run_model route
+        fetch('/run_model', {
+            method: 'GET'
+        })
+        .then(response => {
+            if (response.ok) {
+                // Handle successful response
+                console.log('Model run successfully.');
+            } else {
+                // Handle error response
+                console.error('Failed to run model.');
+            }
+        })
+        .catch(error => {
+            // Handle network error
+            console.error('Network error:', error);
+        });
+    }
+</script>      
+
+</html>
