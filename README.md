@@ -1,7 +1,7 @@
 # AR_recognition_app
-A futuristic application with facial recognition that computes a person's social status rating based on their detected features (ie. age, race, gender, emotion). Similar to the Black Mirror episode.
+Prototype for a futuristic application with facial recognition that can calculate and rate someone's social status based on their detected features (ex. age, race, gender, emotion) - similar to the episode from Black Mirror.
 
-For educational purposes only. Rating based on appearance reflects ethical concerns over dependency on judging individuals through AI.
+(For educational purposes only) The rating is based on appearance and reflects ethical concerns over the dependency on judging individuals through AI.
 
 # Live demo
 There are two ways to try a live demo.
@@ -32,7 +32,7 @@ python app.py
 To quit, press q while the new window camera frame is active, and then press CTRL-C in the terminal to kill the process.
 
 ## Non-technical Users
-This is a walkthough for non-technical users to try a live demo.
+This is a walkthrough for non-technical users to try a live demo.
 
 1. Download the zip of this project by pressing the green 'Code' button.
 2. Unzip the folder, and right-click the unzipped project.
